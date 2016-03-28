@@ -1,0 +1,115 @@
+*
+{
+	border: red 0px solid;
+	font-family: verdana;
+	font-size: 1.1em;
+}
+
+body, html
+{
+	width: 100%;
+	margin: 0;
+}
+
+article
+{
+	margin-top: 10%;
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-bottom: 10%;
+	height: 80%;
+}
+
+form
+{
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+input
+{
+	height: 15px;
+	width: 15px;
+}
+
+button
+{
+	display: block;
+	margin: auto;
+}
+
+ul + button
+{
+	margin: 68px 0 0 0;
+	font-size: 1.2em;
+	display: none;
+}
+
+button + button
+{
+	margin-top: 10px;
+}
+
+#game, #result
+{
+	width: 49%;
+	float: left;
+	margin-bottom: 60px;
+}
+
+#endTournament
+{
+	display: none;
+}
+
+#result
+{
+	margin: 0;
+}
+
+li
+{
+	list-style-type: square;
+	font-size: 0.8em;
+}
+
+table
+{
+	border-collapse: collapse;
+	width: 90%;
+	margin: auto;
+}
+
+
+td, th
+{
+	border: black 1px solid;
+	height: 30px;
+	font-size: 0.8em;
+	text-align: center;
+}
+
+#head
+{
+	font-weight: normal;
+}
+
+span
+{
+	font-size: 1em;
+}
+
+caption, h1
+{
+	text-decoration: underline;
+	font-weight: normal;
+	margin-bottom: 8px;
+}
+
+@media screen and (min-width: 1280px) {
+	article
+	{
+		margin-left: 20%;
+		margin-right: 20%;
+	}
+}

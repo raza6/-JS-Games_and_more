@@ -1,0 +1,65 @@
+<! DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf8"/>
+	<title>421</title>
+	<link rel="stylesheet" href="421.css"/>
+</head>
+<body>
+	<article>
+		<div id="game">
+			<form>
+				<div id="div1">
+					<label for="d1" id="dice1">Dé a</label>
+				</div>
+				<div id="div2">
+					<label for="d2" id="dice2">Dé b</label>
+				</div>
+				<div id="div3">
+					<label for="d3" id="dice3">Dé c</label>
+				</div>
+			</form>
+			<div>
+				<button id="rollTheDice">Lancer les dés</button>
+				<button id="reset">Recommencer</button>
+			</div>
+		</div>
+		<div id="result">
+			<h1>Combinaison actuelle :</h1>
+			<ul id="currentCombination"></ul>
+			<button id="keepCombination">Garder la combinaison</button>
+		</div>
+		<br>
+		<table>
+			<caption>Résumé du tournoi</caption>
+			<tr>
+				<th colspan="2" id="gameInfo">
+					<div id='gameInfoDiv'>Lancer <span id="rollCounter">0/3</span> - Tour du joueur <span id="turnCounter">1</span> - Manche <span id="roundCounter">1/3</span></div>
+					<div id='endTournament'>Fin du tournoi</div>
+				</th>
+			</tr>
+			<tr>
+				<th>Joueur 1</th>
+				<th>Joueur 2</th>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Total : <span id="total1">0</span></td>
+				<td>Total : <span id="total2">0</span></td>
+			</tr>
+		</table>
+	</article>
+<script src="421.js"></script>
+</body>
+</html>
