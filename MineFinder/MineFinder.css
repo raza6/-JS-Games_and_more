@@ -8,7 +8,7 @@ table
 {
 border-collapse: collapse;
 margin: auto;
-margin-top: 30px;
+margin-top: 5px;
 font-family: Arial;
 }
 
@@ -19,4 +19,30 @@ width: 35px;
 height: 35px;
 text-align: center;
 background-color: LightSteelBlue;
+}
+
+h1
+{
+font-size: 1em;
+font-weight: normal;
+text-align: center;
+margin: 5px;
+}
+
+div
+{
+margin: auto;
+width: 230px;
+margin-top: 5px;
+}
+
+#panelDifficulty
+{
+display: none;
+font-size: 0.95em;
+}
+
+*
+{
+font-family: Arial;
 }
