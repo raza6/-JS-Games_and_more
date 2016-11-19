@@ -1,14 +1,14 @@
 <! DOCTYPE html>
 <html>
 <head>
-<meta charset="utf8"/>
-<title>Tic, Tac, Toe</title>
-<link rel="stylesheet" href="TTT.css"/>
-
+	<meta charset="utf8"/>
+	<title>Tic, Tac, Toe</title>
+	<link rel="stylesheet" href="TTT.css"/>
+<!--Morpion menu-->
 </head>
 <body>
 	<table>
-		<caption title="Clique sur les cases !">Morpion =D</caption>
+		<caption>Morpion =D</caption>
 		<tr>
 			<td id="c1"></td>
 			<td id="c2"></td>
@@ -24,9 +24,12 @@
 			<td id="c8"></td>
 			<td id="c9"></td>
 		</tr>
-		<button>Recommencer</button>
 	</table>
-	<p>Tour du joueur X</p>
+	<a href="TTT_VS.html">
+		<button title="Jouer contre un autre joueur sur le même écran">Jouer en local</button>
+	</a>
+	<a href="TTT_IA.html">
+		<button title="Jouer contre une intelligence artificielle">Jouer contre l'ordinateur</button>
+	</a>
 </body>
-<script src="TTT.js"></script>
 </html>
