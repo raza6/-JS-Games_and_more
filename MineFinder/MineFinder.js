@@ -303,7 +303,8 @@ var refresh = document.getElementById('refresh'),
 	boardSizeFix = document.getElementById('boardSize'),
 	bombTotalFix = document.getElementById('bombTotal'),
 	panelDifficulty = document.getElementById('panelDifficulty'),
-	isPanelOpen = false;
+	isPanelOpen = false,
+	isItOkToCreateBoard = true;
 
 refresh.addEventListener('click', function () {
 	if (isNaN(parseFloat(boardSizeFix.value)) == false && isNaN(parseFloat(bombTotalFix.value)) == false ) {
@@ -312,15 +313,20 @@ refresh.addEventListener('click', function () {
 		boardSizeCell = boardSize*boardSize;
 		if (parseFloat(boardSize) > 100) {
 			alert('Le nombre de case est trop élevé');
+			isItOkToCreateBoard = false;
 		} else if (parseFloat(bombTotal) >= parseFloat(boardSizeCell)) {
 			alert('Le nombre de bombe est trop élevé');
+			isItOkToCreateBoard = false;
 		} else {
+			isItOkToCreateBoard = true;
 			while (tableHtml.firstChild) {
 				tableHtml.removeChild(tableHtml.firstChild);
 			}	
 		}
-	createBoard();
-	play();		
+		if(isItOkToCreateBoard) {
+			createBoard();
+			play();	
+		}
 	} else {
 		alert('Vous n\'avez pas rempli tout les paramètres');
 	}
