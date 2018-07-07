@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en"> 
+	<head>
+        <meta charset="utf-8" />
+        <meta name="description" content="EveField js game"/>
+		<meta name="author" content="Antonin Gontier"/>
+        <title>EveField</title>
+        <style type="text/css"></style>
+        <link rel="stylesheet" href="EveField.css" />
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    </head>
+    
+	<body>
+        <h1>EveField</h1>
+        <article>
+            <div id="imgWrap">
+                <img src="EveField_art/EveField_windmill.png" alt="something went wrong =(" id="Fwindmill"/>
+                <img src="EveField_art/EveField_factory.png" alt="something went wrong =(" id="Ffactory"/>
+                <img src="EveField_art/EveField_bakery.png" alt="something went wrong =(" id="Fbakery"/>
+                <img src="EveField_art/EveField_wheatHangar.png" alt="something went wrong =(" id="FwheatHangar"/>
+                <img src="EveField_art/EveField_carrotHangar.png" alt="something went wrong =(" id="FcarrotHangar"/>
+                <img src="EveField_art/EveField_appleHangar.png" alt="something went wrong =(" id="FappleHangar"/>
+                <img src="EveField_art/EveField_wheatField.png" alt="something went wrong =(" id="FwheatField"/>
+                <img src="EveField_art/EveField_carrotField.png" alt="something went wrong =(" id="FcarrotField"/>
+                <img src="EveField_art/EveField_appleField.png" alt="something went wrong =(" id="FappleField"/>
+                <img src="EveField_art/EveField_farm.png" alt="something went wrong =(" id="Ffarm"/>
+            </div>
+            
+            <div id="buttonArea">
+                <h2>Management area</h2>
+                <h3>Clock</h3>
+                <p>Time spent : <span id="timeSpent">0</span>s</p>
+                <p>Day left : <span id="gameTick">365</span></p>
+
+                <h3>Building</h3>
+                <p>Improvement point left : <span id="impPoint">30</span></p>
+                <div id="buttonWrapper">
+                    <span>
+                        <input class="buttonUp" type="button" id="appleFieldU" value="+" title="$500"></input>
+                        <label>Apple Field : <span id="appleField">0</span></label>
+                        <input class="buttonDown" type="button" id="appleFieldD" value="-" title="$250"></input>
+                        <br />
+                        <input class="buttonUp" type="button" id="carrotFieldU" value="+" title="$500"></input>
+                        <label>Carrot Field : <span id="carrotField">0</span></label>
+                        <input class="buttonDown" type="button" id="carrotFieldD" value="-" title="$250"></input>
+                        <br />
+                        <input class="buttonUp" type="button" id="wheatFieldU" value="+" title="$500"></input>
+                        <label>Wheat Field : <span id="wheatField">0</span></label>
+                        <input class="buttonDown" type="button" id="wheatFieldD" value="-" title="$250"></input>
+                    </span>
+                    
+                    <span>
+                        <input class="buttonUp" type="button" id="appleHangarU" value="+" title="$5,000"></input>
+                        <label>Apple Hangar : <span id="appleHangar">0</span></label>
+                        <input class="buttonDown" type="button" id="appleHangarD" value="-" title="$2,500"></input>
+                        <br />
+                        <input class="buttonUp" type="button" id="carrotHangarU" value="+" title="$5,000"></input>
+                        <label>Carrot Hangar : <span id="carrotHangar">0</span></label>
+                        <input class="buttonDown" type="button" id="carrotHangarD" value="-" title="$2,500"></input>
+                        <br />
+                        <input class="buttonUp" type="button" id="wheatHangarU" value="+" title="$5,000"></input>
+                        <label>Wheat Hangar : <span id="wheatHangar">0</span></label>
+                        <input class="buttonDown" type="button" id="wheatHangarD" value="-" title="$2,500"></input>
+                    </span>
+        
+                    <span>
+                        <input class="buttonUp" type="button" id="bakeryU" value="+" title="$30,000"></input>
+                        <label>Bakery : <span id="bakery">0</span></label>
+                        <input class="buttonDown" type="button" id="bakeryD" value="-" title="$15,000"></input>
+                        <br />
+                        <input class="buttonUp" type="button" id="windmillU" value="+" title="$30,000"></input>
+                        <label>Windmill : <span id="windmill">0</span></label>
+                        <input class="buttonDown" type="button" id="windmillD" value="-" title="$15,000"></input>
+                        <br />
+                        <input class="buttonUp" type="button" id="factoryU" value="+" title="$100,000"></input>
+                        <label>Factory : <span id="factory">0</span></label>
+                        <input class="buttonDown" type="button" id="factoryD" value="-" title="$50,000"></input>
+                    </span>
+                </div>
+
+                <h3>Wallet</h3>
+                <p>Money : $<span id="money">50,000</span></p>
+                <p>Income : <span id="income">0</span></p>
+            </div>
+            <div id="newsArea">
+                <h2>Mailbox</h2>
+                <div id="newsFeed">
+
+                </div>
+                <input type="button" value="Start" id="start" />
+            </div>
+            <div id="rulesArea">
+                <h2>Economy handbook</h2>
+                <h3>Main principle</h3>
+                <p>Each building generate money. You can add/upgrade or delete/downgrade buildings by pressing the (+) or (-) button. Be careful ! You have a limited amount of amelioration.
+                    <br />Fields generate a constant income whereas hangars boost fields income. 
+                    <br />Besides, as nature knows best, respecting a ratio of one carrot field / one apple field / two wheat fields will boost your productivity</p>
+                <h4>Price :</h4>
+                <div>
+                    <ul>
+                        <li>Apple Field : $500</li>
+                        <li>Carrot Field : $500</li>
+                        <li>Wheat Field : $500</li>
+                    </ul>
+                    <ul>
+                        <li>Apple Hangar : $5,000</li>
+                        <li>Carrot Hangar : $5,000</li>
+                        <li>Wheat Hangar : $5,000</li>
+                    </ul>
+                    <ul>
+                        <li>Bakery : $30,000</li>
+                        <li>Windmill : $30,000</li>
+                        <li>Factory : $100,000</li>
+                    </ul>
+                </div>
+                <h3>Special Building</h3>
+                <p>Special buildings (bakery, windmill and factory) are really lucrative, but they have high-maintenance costs. The goal is to never operate at no load. 
+                    <br /> So, make sure to always have twice more wheat fields than windmill, four times more apple/carrot fields than bakery and twice more bakery/windmill than factory ! 
+                    <br /> Moreover, the bakery won't work without a windmill, and the factory won't run without a bakery and a windmill.
+                </p>
+                <h3>Alea</h3>
+                <p>Sometimes life can fool you. This will directly affect your income or your wallet...</p>
+            </div>
+        </article>
+		<script src="EveField.js" type="text/javascript"></script>
+	</body>
+</html>	

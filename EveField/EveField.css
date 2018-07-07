@@ -1,0 +1,167 @@
+body{
+    height: 100;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+article{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content:space-around;
+}
+
+h1{
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+}
+
+#imgWrap{
+    justify-content: inherit;
+    position: relative;
+}
+
+img{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#Fwindmill{
+    z-index: 9;
+    display: none;
+}
+
+#Ffactory{
+    z-index: 8;
+    display: none;
+}
+
+#Fbakery{
+    z-index: 7;
+    display: none;
+}
+
+#FwheatHangar{
+    z-index: 6;
+    display: none;
+}
+
+#FcarrotHangar{
+    z-index: 5;
+    display: none;
+}
+
+#FappleHangar{
+    z-index: 4;
+    display: none;
+}
+
+#FwheatField{
+    z-index: 3;
+    display: none;
+}
+
+#FcarrotField{
+    z-index: 2;
+    display: none;
+}
+
+#FappleField{
+    z-index: 1;
+    display: none;
+}
+
+#Ffarm{
+    position: static;
+}
+
+#buttonArea, #newsArea, #rulesArea{
+    border: 3px solid black;
+    height: fit-content;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 5px;
+    margin-left: 5%;
+}
+
+#buttonWrapper{
+    display: flex;
+}
+
+#buttonWrapper span{
+    display: flex;
+    flex-direction: column;
+    margin: 0 5px 0 5px;
+}
+
+#buttonWrapper span input{
+    margin: 0 auto 0 auto;
+    width: 20px;
+    text-align: center;
+    font-weight: bold;
+    padding: 0;
+}
+
+#buttonWrapper span label{
+    display: flex;
+}
+
+.buttonUp{
+    background-color: rgba(16, 82, 22, 0.7);
+    border: 1px solid rgba(0, 0, 0, 0.7);
+}
+
+.buttonDown{
+    background-color: rgba(110, 24, 24, 0.7);
+    border: 1px solid rgba(0, 0, 0, 0.7);
+}
+
+#newsFeed{
+    width: fit-content;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    white-space: normal;
+}
+
+#newsFeed span{
+    margin: 5px 0 5px 0;
+}
+
+#newsArea{
+    display: flex;
+    flex-direction: column;
+}
+
+#newsArea input{
+    margin: 0 auto 0 auto;
+}
+
+#rulesArea{
+    width: fit-content;
+    max-width: 700px;
+    white-space: normal;
+}
+
+#rulesArea h4{
+    margin: 0;
+}
+
+#rulesArea h3{
+    margin-bottom: 0;
+}
+
+#rulesArea p{
+    margin-top: 0.1em;
+}
+
+#rulesArea div{
+    display: flex;
+}
